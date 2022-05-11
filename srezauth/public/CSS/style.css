@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("Fonts/Roboto/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+* {
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #304ffd;
+}
+
+html,
+body {
+  height: 94%;
+}
+
+header {
+  color: #3f434a;
+  text-align: center;
+  margin-bottom: 35px;
+}
+header > img {
+  padding-top: 135px;
+}
+
+footer {
+  color: #8a9099;
+  text-align: center;
+}
+
+/* Форма с синим bg */
+.body {
+  background-color: #304ffd;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+/* Форма со светлым bg */
+.body-light {
+  background-color: #e9f3f5;
+}
+
+.img {
+  width: 40%;
+}
+
+.wrapper {
+  background-color: white;
+  width: 600px;
+  height: auto;
+  min-height: 600px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.wrapper-light {
+  min-height: auto;
+}
+
+.container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  /* padding-top: 40px;
+  padding-bottom: 40px; */
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.field-label {
+  color: #8a9099;
+}
+
+.field-input {
+  height: 40px;
+  border-color: #e8e9eb;
+  border-style: solid;
+  box-sizing: border-box;
+  border-radius: 14px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.field-password {
+  letter-spacing: 2px;
+}
+
+.toggle-password {
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+.field-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.checkbox {
+  accent-color: #304ffd;
+}
+.wrapper-checkbox > * {
+  cursor: pointer;
+}
+
+.button-Google {
+  height: 40px;
+  background-color: white;
+  border: 1px solid #e8e9eb;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+}
+.button-Google:hover {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 0 3px #304ffd;
+}
+.button-Google img,
+.button-Google span {
+  margin-right: auto;
+}
+
+.separator {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 60%;
+  color: #8a9099;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e8e9eb;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.button-next {
+  background: #304ffd;
+  border-radius: 14px;
+  color: #fff;
+  border: 0.1px solid #304ffd;
+  padding: 0.85em 0.75em;
+  margin: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.button-next:hover {
+  color: #304ffd;
+}
+.button-next::after {
+  content: "";
+  background: #ecf0f1;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+.button-next.grow-ellipse::after {
+  transition: all 0.3s ease;
+}
+.button-next.grow-ellipse:hover::after {
+  transition: all 0.3s ease-out;
+}
+.button-next.grow-ellipse::after {
+  border-radius: 50%;
+  left: -50%;
+  right: -50%;
+  top: -150%;
+  bottom: -150%;
+  line-height: 8.34em;
+  transform: scale(0, 0);
+}
+.button-next.grow-ellipse:hover::after {
+  transform: scale(1, 1);
+}
+
+@media screen and (max-width: 1000px) {
+  .img {
+    width: 0%;
+    flex-basis: 0%;
+  }
+  .wrapper,
+  .container {
+    width: 90%;
+    height: 90%;
+  }
+  .body {
+    justify-content: center;
+  }
+}

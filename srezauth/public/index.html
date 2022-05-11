@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Подключение стиля, иконки и js -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="public/favicon.ico" />
+    <script src="script.js"></script>
+    <!-- Убираем второй глазок -->
+    <style>
+      input::-ms-reveal,
+      input::-ms-clear {
+        display: none;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Компот</title>
+  </head>
+  <body class="body">
+    <img class="img" src="img/preview.png" />
+    <main class="wrapper">
+      <div></div>
+      <form class="container" action="user.html">
+        <header>
+          <h1>Авторизация</h1>
+        </header>
+        <div class="field">
+          <label class="field-label" for="login">Email</label>
+          <input
+            id="login"
+            class="field-input"
+            type="text"
+            placeholder="Example@example.com"
+            required
+          />
+        </div>
+        <div class="field">
+          <label class="field-label" for="password">Пароль</label>
+          <div>
+            <input
+              id="password"
+              class="field-input field-password"
+              type="password"
+              placeholder="******"
+              required
+            />
+            <a class="toggle-password" onclick="togglepassword()"
+              ><img id="img-eye" src="img/show.svg"
+            /></a>
+          </div>
+        </div>
+        <div class="field-options">
+          <div></div>
+          <a href="forget-password.html">Забыли пароль</a>
+          <div></div>
+        </div>
+        <button type="submit" class="button-next grow-ellipse">Войти</button>
+      </form>
+      <footer>
+        <p>Нет аккаунта? <a href="registration.html"> Зарегистрироваться</a></p>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+create database SrezAuth
+go 
+use SrezAuth
+go
+create table Users
+(
+Login nvarchar(100) primary key,
+Password nvarchar(100) not null,
+Surname nvarchar(100) not null,
+Name nvarchar(100) not null,
+Middlename nvarchar(100) not null,
+Photo varbinary(max)
+)
